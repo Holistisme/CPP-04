@@ -1,26 +1,29 @@
 ##################################################################################
 #                              Author: Alexy Heitz                               #
-#                        File Name: CPP-04/ex00/Makefile                         #
+#                        File Name: CPP-04/ex01/Makefile                         #
 #                   Creation Date: January 30, 2025 11:12 AM                     #
-#                    Last Updated: January 30, 2025 11:18 AM                     #
+#                    Last Updated: February 1, 2025 07:01 PM                     #
 #                           Source Language: makefile                            #
 #                                                                                #
 #                            --- Code Description ---                            #
 #               Instructions for compiling, cleaning, and more!                  #
 ##################################################################################
 
-NAME		= Polymorphism
+NAME		= I_don’t_want_to_set_the_world_on_fire
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -Wshadow -std=c++98
 
 SOURCE		= main.cpp					\
 			Animal/Animal.cpp			\
+			Brain/Brain.cpp				\
 			Cat/Cat.cpp					\
 			Dog/Dog.cpp					\
 			WrongAnimal/WrongAnimal.cpp	\
 			WrongCat/WrongCat.cpp		\
+			utilities/confirmAction.cpp	\
 			utilities/getInputLine.cpp	\
+			utilities/handleSigInt.cpp	\
 			utilities/sameString.cpp	\
 
 OBJECTS		= $(SOURCE:.cpp=.o)

@@ -1,35 +1,37 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                    File Name: /CPP-04/ex00/Animal/Animal.hpp                   *
-*                    Creation Date: January 30, 2025 11:16 AM                    *
-*                    Last Updated: February 1, 2025 12:56 PM                     *
+*                    File Name: /CPP-04/ex01/Brain/Brain.hpp                     *
+*                    Creation Date: February 1, 2025 12:52 PM                    *
+*                    Last Updated: February 1, 2025 07:06 PM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                        Genes of the whole animal genre                         *
+*                                 Brain neurons                                  *
 *********************************************************************************/
 
 #pragma once
 
 /********************************************************************************/
 
+#include <cstdlib>
 #include <iostream>
 
 /********************************************************************************/
 
 /**
- * @brief The animal genus, parent of more specific species.
+ * @brief The source of great knowledge.
  * 
  */
-class Animal {
-	protected:
-		std::string type;
+class Brain {
+	private:
+		std::string ideas[100];
 	public:
-		Animal(void);
-		Animal(const Animal &source);
-		Animal &operator=(const Animal &source);
-		virtual ~Animal(void);
+		Brain(void);
+		Brain(const Brain &source);
+		Brain &operator=(const Brain &source);
+		~Brain(void);
 
-		std::string	 getType(void) const;
-		virtual void makeSound(void) const;
+		void setIdea(const int index, const std::string &idea);
+
+		std::string getIdea(const int index) const;
 };

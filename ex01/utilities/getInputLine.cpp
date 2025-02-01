@@ -1,8 +1,8 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*               File Name: /CPP-04/ex00/utilities/getInputLine.cpp               *
+*               File Name: /CPP-04/ex01/utilities/getInputLine.cpp               *
 *                    Creation Date: February 1, 2025 11:43 AM                    *
-*                    Last Updated: February 1, 2025 07:43 AM                     *
+*                    Last Updated: February 1, 2025 07:05 PM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
@@ -31,6 +31,7 @@ std::string getInputLine(void) {
 
 	if (std::cin.eof()) {
 		std::cout << EOF << std::endl;
+		manageZooMemory(NULL);
 		exit(EXIT_SUCCESS);
 	}
 	else if (std::cin.fail()) {
