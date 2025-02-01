@@ -1,52 +1,53 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                       File Name: /CPP-04/ex00/Dog/Dog.cpp                      *
-*                    Creation Date: January 30, 2025 06:02 PM                    *
-*                    Last Updated: February 1, 2025 11:11 PM                     *
+*                      File Name: /CPP-04/ex00/Cat/Cat.cpp                       *
+*                    Creation Date: February 1, 2025 09:53 AM                    *
+*                    Last Updated: February 1, 2025 12:19 PM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                                 Dog's language                                 *
+*                     How they are going to make their eyes                      *
 *********************************************************************************/
 
-#include "./Dog.hpp"
+
+#include "./Cat.hpp"
 #include "./../output.hpp"
 
 /********************************************************************************/
 
-Dog::Dog(void) : Animal() {
-	this->type = "Dog";
+Cat::Cat(void) : Animal() {
+	this->type = "Cat";
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
-		<< " A new dog has been born! It wags its tail excitedly!" << std::endl;
+		<< " A mysterious cat appears, staring at you with deep, judgmental eyes..." << std::endl;
 }
 
-Dog::Dog(const Dog &source) : Animal(source) {
+Cat::Cat(const Cat &source) : Animal(source) {
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
 		<< BG_GREEN << '[' << &source << ']' << RESET
-		<< " A dog clones itself! The new dog looks just like a " << source.type << '.' << std::endl;
+		<< " Another cat emerges! It looks exactly like " << source.type << ", but does it have the same attitude?" << std::endl;
 }
 
-Dog &Dog::operator=(const Dog &source) {
+Cat &Cat::operator=(const Cat &source) {
 	if (this != &source) {
 		Animal::operator=(source);
 		std::cout << BG_BLUE << '[' << this << ']' << RESET
 			<< BG_GREEN << '[' << &source << ']' << RESET
-			<< " This dog learns from another! Now it behaves like a " << source.type << '.' << std::endl;
+			<< " This cat adopts the manners of another! Now it behaves just like a " << source.type << '.' << std::endl;
 	} else {
 		std::cout << BG_BLUE << '[' << this << ']' << RESET
 			<< BG_GREEN << '[' << &source << ']' << RESET
-			<< " This dog tries to copy itself... but it's already the same." << std::endl;
+			<< " The cat tries to copy itself... but decides it's already perfect!" << std::endl;
 	}
 	return *this;
 }
 
-Dog::~Dog(void) {
+Cat::~Cat(void) {
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
-		<< " A loyal dog leaves this world... Rest well, good boy." << std::endl;
+		<< " A silent cat vanishes into the shadows... Perhaps it never truly existed." << std::endl;
 }
 
 /********************************************************************************/
 
-void Dog::makeSound(void) const {
-	std::cout << GREEN << type << RESET << ": Woof! Woof!"  << std::endl;
+void Cat::makeSound(void) const {
+	std::cout << GREEN << type << RESET << ": Meow!"  << std::endl;
 }

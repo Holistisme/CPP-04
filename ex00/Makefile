@@ -14,9 +14,15 @@ NAME		= Polymorphism
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -Wshadow -std=c++98
 
-SOURCE		= main.cpp			\
-			Animal/Animal.cpp	\
-			Dog/Dog.cpp			\
+SOURCE		= main.cpp					\
+			Animal/Animal.cpp			\
+			Cat/Cat.cpp					\
+			Dog/Dog.cpp					\
+			WrongAnimal/WrongAnimal.cpp	\
+			WrongCat/WrongCat.cpp		\
+			utilities/getInputLine.cpp	\
+			utilities/sameString.cpp	\
+			utilities/trimSpaces.cpp	\
 
 OBJECTS		= $(SOURCE:.cpp=.o)
 

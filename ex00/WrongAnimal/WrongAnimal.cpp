@@ -1,51 +1,52 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                    File Name: /CPP-04/ex00/Animal/Animal.cpp                   *
-*                    Creation Date: January 30, 2025 11:16 AM                    *
+*              File Name: /CPP-04/ex00/WrongAnimal/WrongAnimal.cpp               *
+*                    Creation Date: February 1, 2025 10:09 AM                    *
 *                    Last Updated: February 1, 2025 11:11 AM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                                Animal functions                                *
+*                      The functioning of a strange entity                       *
 *********************************************************************************/
 
-#include "./Animal.hpp"
+
+#include "./WrongAnimal.hpp"
 #include "./../output.hpp"
 
 /********************************************************************************/
 
-Animal::Animal(void) : type("Unknown animal") {
+WrongAnimal::WrongAnimal(void) : type("Unknown wrong animal") {
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
-		<< " A mysterious being has just appeared ... What kind of animal is it?" << std::endl;
+		<< " A strange, unidentified creature appears... but something feels off!" << std::endl;
 }
 
-Animal::Animal(const Animal &source) : type(source.type) {
+WrongAnimal::WrongAnimal(const WrongAnimal &source) : type(source.type) {
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
 		<< BG_GREEN << '[' << &source << ']' << RESET
-		<< " A new animal takes the form of a " << source.type << '.' << std::endl;
+		<< " A glitch in nature creates another " << source.type << ". But is it really the same?" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &source) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &source) {
 	if (this != &source) {
 		type = source.type;
 		std::cout << BG_BLUE << '[' << this << ']' << RESET
 			<< BG_GREEN << '[' << &source << ']' << RESET
-			<< " An animal adopts the soul of another! Transformation into a " << source.type << '.' << std::endl;
+			<< " This weird creature copies " << source.type << ", but it still feels... wrong." << std::endl;
 	} else {
 		std::cout << BG_BLUE << '[' << this << ']' << RESET
 			<< BG_GREEN << '[' << &source << ']' << RESET
-			<< " This animal tries to become itself... nothing changes." << std::endl;
+			<< " It tries to copy itself... but it was already flawed to begin with." << std::endl;
 	}
 	return *this;
 }
 
-Animal::~Animal(void) {
+WrongAnimal::~WrongAnimal(void) {
 	std::cout << BG_BLUE << '[' << this << ']' << RESET
-		<< " An animal disappears in nature... Goodbye to it." << std::endl;
+		<< " The unnatural being fades into nothingness, leaving no trace behind." << std::endl;
 }
 
 /********************************************************************************/
 
-void Animal::makeSound(void) const {
-	std::cout << GREEN << type << RESET << ": * A strangely noticeable groan *"  << std::endl;
+void WrongAnimal::makeSound(void) const {
+	std::cout << GREEN << type << RESET << ": ALERT: Undefined sound detected!"  << std::endl;
 }

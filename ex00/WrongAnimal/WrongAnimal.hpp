@@ -1,12 +1,12 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                    File Name: /CPP-04/ex00/Animal/Animal.hpp                   *
-*                    Creation Date: January 30, 2025 11:16 AM                    *
+*              File Name: /CPP-04/ex00/WrongAnimal/WrongAnimal.hpp               *
+*                    Creation Date: February 1, 2025 10:09 AM                    *
 *                    Last Updated: February 1, 2025 11:11 AM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                        Genes of the whole animal genre                         *
+*                        Is it really an animal finally?                         *
 *********************************************************************************/
 
 #pragma once
@@ -18,17 +18,17 @@
 /********************************************************************************/
 
 /**
- * @brief The animal genus, parent of more specific species.
+ * @brief The WrongAnimal genus, parent of more wrong specific species.
  * 
  */
-class Animal {
+class WrongAnimal {
 	protected:
 		std::string type;
 	public:
-		Animal(void);
-		Animal(const Animal &source);
-		Animal &operator=(const Animal &source);
-		virtual ~Animal(void);
+		WrongAnimal(void);
+		WrongAnimal(const WrongAnimal &source);
+		WrongAnimal &operator=(const WrongAnimal &source);
+		~WrongAnimal(void);
 
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 };

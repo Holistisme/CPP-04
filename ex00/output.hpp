@@ -67,7 +67,7 @@
 
 /********************************************************************************/
 
-#define	PROGRAM						YELLOW	"Now it’s weird!"
+#define	PROGRAM						YELLOW	"Polymorphism"
 #define	EXIT_MESSAGE				"Thank you for testing "	PROGRAM	RESET	"!"
 
 #define ERROR						BG_RED	"ERROR:"		RESET	RED	" "

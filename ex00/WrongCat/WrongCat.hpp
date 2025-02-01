@@ -1,34 +1,33 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                    File Name: /CPP-04/ex00/Animal/Animal.hpp                   *
-*                    Creation Date: January 30, 2025 11:16 AM                    *
-*                    Last Updated: February 1, 2025 11:11 AM                     *
+*                 File Name: /CPP-04/ex00/WrongCat/WrongCat.hpp                  *
+*                    Creation Date: February 1, 2025 10:31 AM                    *
+*                    Last Updated: February 1, 2025 11:12 AM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                        Genes of the whole animal genre                         *
+*                            A Strange Percant Regard                            *
 *********************************************************************************/
+
 
 #pragma once
 
 /********************************************************************************/
 
-#include <iostream>
+#include "./../WrongAnimal/WrongAnimal.hpp"
 
 /********************************************************************************/
 
 /**
- * @brief The animal genus, parent of more specific species.
+ * @brief A cat that strangely makes "meow".
  * 
  */
-class Animal {
-	protected:
-		std::string type;
+class WrongCat : public WrongAnimal {
 	public:
-		Animal(void);
-		Animal(const Animal &source);
-		Animal &operator=(const Animal &source);
-		virtual ~Animal(void);
+		WrongCat(void);
+		WrongCat(const WrongCat &source);
+		WrongCat &operator=(const WrongCat &source);
+		~WrongCat(void);
 
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 };

@@ -1,34 +1,33 @@
 /*********************************************************************************
 *                              Author: Alexy Heitz                               *
-*                    File Name: /CPP-04/ex00/Animal/Animal.hpp                   *
-*                    Creation Date: January 30, 2025 11:16 AM                    *
+*                      File Name: /CPP-04/ex00/Cat/Cat.hpp                       *
+*                    Creation Date: February 1, 2025 09:53 AM                    *
 *                    Last Updated: February 1, 2025 11:11 AM                     *
 *                              Source Language: cpp                              *
 *                                                                                *
 *                            --- Code Description ---                            *
-*                        Genes of the whole animal genre                         *
+*                             The genes of cuteness                              *
 *********************************************************************************/
+
 
 #pragma once
 
 /********************************************************************************/
 
-#include <iostream>
+#include "./../Animal/Animal.hpp"
 
 /********************************************************************************/
 
 /**
- * @brief The animal genus, parent of more specific species.
+ * @brief A cat that makes "meow".
  * 
  */
-class Animal {
-	protected:
-		std::string type;
+class Cat : public Animal {
 	public:
-		Animal(void);
-		Animal(const Animal &source);
-		Animal &operator=(const Animal &source);
-		virtual ~Animal(void);
+		Cat(void);
+		Cat(const Cat &source);
+		Cat &operator=(const Cat &source);
+		virtual ~Cat(void);
 
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 };
